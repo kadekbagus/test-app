@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\NoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,11 @@ Route::prefix('/item')->group( function () {
     Route::post('/store', [ItemController::class, 'store']);
     Route::put('/{id}', [ItemController::class, 'update']);
     Route::delete('/{id}', [ItemController::class, 'destroy']);
+});
+
+Route::get('/notes', [NoteController::class, 'index']);
+Route::prefix('/note')->group( function () {
+    Route::post('/store', [NoteController::class, 'store']);
+    Route::put('/{id}', [NoteController::class, 'update']);
+    Route::delete('/{id}', [NoteController::class, 'destroy']);
 });
