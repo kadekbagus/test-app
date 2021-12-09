@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Notes</h2>
+        
         <create/>
 
         <div v-for="data in listData" :key="data.id" class="container">
@@ -46,6 +46,7 @@ export default {
 
 * {
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 body {

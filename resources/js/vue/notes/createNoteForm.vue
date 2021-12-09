@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <h2>Notes</h2>
         <input type="text" v-model="title">
         <textarea name="" id="" cols="30" rows="10" v-model="note"></textarea>
         <button v-on:click="createNote()">add</button>
