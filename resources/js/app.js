@@ -1,7 +1,13 @@
 require('./bootstrap');
 
+import Alpine from 'alpinejs';
 import Vue from 'vue'
 import App from  './vue/app'
+
+window.Alpine = Alpine;
+
+Alpine.start();
+
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
