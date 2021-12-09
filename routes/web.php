@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/new', function () {
     return view('new-page');
 });
+
+
+Route::get('/notes', function () {
+    return view('note-list-page');
+});

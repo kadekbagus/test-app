@@ -3,6 +3,7 @@
         <p>hello kadek</p>
         <button v-on:click="getList()">get list user</button>
         <p v-for="data in listData" :key="data.id"> NAME: {{ data.name.title }} {{ data.name.first }} {{ data.name.last}} </p>
+    </div>
 </template>
 
 

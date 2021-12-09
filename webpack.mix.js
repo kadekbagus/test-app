@@ -17,3 +17,5 @@ mix.js('resources/js/app.js', 'public/js').vue()
     ]);
 
 mix.js('resources/js/new.js', 'public/js').vue();
+
+mix.js('resources/js/note-list.js', 'public/js').vue();
