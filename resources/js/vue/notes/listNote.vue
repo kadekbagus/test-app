@@ -2,12 +2,13 @@
     <div>
         
         <create/>
-
-        <div v-for="data in listData" :key="data.id" class="container">
-            <header class="header">
-                <input type="text" id="filter" v-bind:placeholder="data.title">
-            </header>
-            <div>{{ data.note }}</div>
+        <div class="note">
+            <div v-for="data in listData" :key="data.id" class="container">
+                <header class="header">
+                    <input type="text" id="filter" v-bind:placeholder="data.title">
+                </header>
+                <div class="note-text">{{ data.note }}</div>
+            </div>
         </div>
 
     </div>
@@ -52,13 +53,6 @@ export default {
 body {
     background-color: #f8f9fd;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
 }
 
 .container  {
@@ -88,7 +82,7 @@ body {
 .header input {
     background-color: rgba(0, 0, 0, 0.3);
     border: 0;
-    border-radius: 50px;
+    border-radius: 0px;
     color: #fff;
     font-size: 14px;
     padding: 10px 15px;
@@ -99,44 +93,18 @@ body {
     outline: none;
 }
 
-.user-list {
-    background-color: #fff;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    max-height: 400px;
-    overflow-y: auto;
+
+
+.note {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.user-list li {
-    display: flex;
-    padding: 20px;
+.note-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.user-list img {
-    border-radius: 50%;
-    object-fit: cover;
-    height: 50px;
-    width: 50px;
-}
-
-.user-list .user-info {
-    margin-left: 10px;
-}
-
-.user-list .user-info h4 {
-    margin: 0 0 10px;
-}
-
-.user-list .user-info p {
-    font-size: 12px;
-}
-
-.user-list li:not(:last-of-type) {
-    border-bottom: 1px solid #eee;
-}
-
-.user-list li.hide {
-    display: none;   
-}
 </style>

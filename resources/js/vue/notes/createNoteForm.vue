@@ -48,3 +48,42 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+
+.container {
+    display: block;
+    padding: .8em;
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid grey;
+}
+
+
+
+button {
+    background: cornflowerblue;
+    color: white;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+button:hover {
+    background: gray;
+    color: black;
+}
+</style>
